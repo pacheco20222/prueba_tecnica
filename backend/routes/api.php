@@ -15,6 +15,7 @@ Route::get('/user', function (Request $request) {
 
 // Requests Routes
 Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/requests', [RequestController::class, 'index']);
     Route::post('/requests', [RequestController::class, 'store']);
     Route::get('/requests/{id}', [RequestController::class, 'show']);

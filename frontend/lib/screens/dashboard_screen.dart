@@ -70,8 +70,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Here create request still not added.
+        onPressed: () async {
+          final result = await Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CreateRequestScreen())
+          );
+
+          if (result == true) {
+            setState(() {
+              _requestsFuture = _requestsService.getRequests();
+            });
+          }
         },
         child: Icon(Icons.add),
       ),

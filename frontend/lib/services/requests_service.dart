@@ -26,4 +26,22 @@ class RequestsService {
       throw Exception('Failed to load requests');
     }
   }
+
+  Future<RequestModel> createRequest(String title, String description) async {
+    final token = await getToken();
+
+    final response = await http.post(
+      Uri.parse('$baseUrl/requests'),
+      headers: {
+        'Authorization' : 'Bearer $token',
+        'Content-Type' : 'application/json',
+      },
+      body: jsonEncode({
+        'title' : title,
+        'description' : description,
+      }),
+    );
+
+    return response.statusCode == 201;
+  }
 }

@@ -101,3 +101,11 @@ Utilizar esta opcion si ya tiene PHP y Composer instalados localmente.
 3. Presionar **F5** para iniciar la depuracion.
 
 Nota: La aplicacion esta configurada para conectarse a `http://10.0.2.2` (Android Emulator) o localhost.
+
+Recursos:
+https://www.youtube.com/watch?v=kGI7Kj3n9o4
+https://www.youtube.com/watch?v=zon3WgmcqQw
+https://code.tutsplus.com/how-to-create-lists-in-your-app-with-flutter--cms-36937t
+https://docs.flutter.dev
+https://medium.com/@rohan.surve5/building-a-simple-login-screen-in-flutter-my-comeback-to-ui-development-60ebf1cd4bdc
+https://sakibmahmood.medium.com/developing-a-professional-flutter-task-management-application-a-comprehensive-guide-96006be0b4eb
